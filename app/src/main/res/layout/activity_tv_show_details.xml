@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141414"
+    tools:context=".TvShowDetailsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <ImageView
+        android:id="@+id/programCoverImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="53dp"
+
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352"
+        tools:src="@drawable/default_background" />
+
+    <TextView
+        android:id="@+id/programTitleTextView"
+        android:layout_width="239dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="right"
+        android:textColor="@color/search_opaque"
+        android:textSize="34sp"
+        android:fontFamily="@font/tajawal_regular"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="اسم البرنامج" />
+
+    <TextView
+        android:id="@+id/castTextView"
+        android:layout_width="232dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:fontFamily="@font/tajawal_regular"
+
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/programTitleTextView"
+        app:layout_constraintStart_toStartOf="@+id/programTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/programTitleTextView"
+        tools:text="اسم المقدم" />
+
+
+    <TextView
+        android:id="@+id/programDescriptionTextView"
+        android:layout_width="244dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4dp"
+        android:gravity="right"
+        android:layout_marginEnd="26dp"
+        android:fontFamily="@font/tajawal_regular"
+
+        android:maxLines="8"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/castTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/castTextView"
+        app:layout_constraintTop_toBottomOf="@+id/castTextView"
+        tools:text="وصف طويل للبرنامج يظهر هنا ويمكن أن يمتد لعدة أسطر..." />
+
+    <TextView
+        android:id="@+id/episodesTitleTextView"
+        android:layout_width="0dp"
+        android:layout_marginTop="84dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/tajawal_regular"
+
+        android:gravity="center"
+        android:text="حلقات البرنامج"
+        android:textColor="@color/search_opaque"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/episodesRecyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/episodesRecyclerView"
+        android:layout_width="184dp"
+        android:layout_height="289dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/tajawal_regular"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/programTitleTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/episodeImage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="صورة الحلقة" />
+
+    <TextView
+        android:id="@+id/episodeDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="المدة: 20 دقيقة"
+        android:textSize="12sp"
+        android:textColor="#CCCCCC"
+        android:gravity="center"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/episodeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="عنوان الحلقة"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+</LinearLayout>

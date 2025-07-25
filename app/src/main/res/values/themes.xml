@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- الثيم الرئيسي المستخدم في التطبيق -->
+    <style name="Theme.DaawahTV" parent="Theme.Leanback">
+        <!-- تعيين الخط الافتراضي لكل عناصر النص -->
+        <item name="android:fontFamily">@font/tajawal_regular</item>
+
+        <!-- (اختياري) ألوان أخرى ممكن تضيفها -->
+        <!-- <item name="android:colorBackground">#000000</item> -->
+        <!-- <item name="android:textColor">#FFFFFF</item> -->
+    </style>
+
+</resources>
